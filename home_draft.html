@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rexdale Soccer League - Homepage Design</title>
+
+    <style>
+
+        /* =========================================================
+           BASIC COLOURS
+           ========================================================= */
+
+        :root {
+            --royal-blue: #0057b8;
+            --dark-blue: #003f88;
+            --light-blue: #edf4fc;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --medium-gray: #d9d9d9;
+            --text-gray: #555555;
+            --dark: #222222;
+        }
+
+
+        /* =========================================================
+           RESET
+           ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 90px;
+        }
+
+        .site-header nav {
+            display: flex;
+            gap: 28px;
+        }
+
+            .site-header nav a {
+                color: var(--dark);
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+                .site-header nav a:hover {
+                    color: var(--royal-blue);
+                }
+
+
+        /* =========================================================
+           SIMPLE HERO
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Simple introduction to the organization.
+
+           The actual site could use the Rexdale logo on either
+           the left or right and a short welcome message.
+        */
+
+        .hero {
+            background: var(--royal-blue);
+            color: var(--white);
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+            .hero-text .section-purpose {
+                margin-bottom: 15px;
+                color: #d9eaff;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+        .hero h1 {
+            margin: 0 0 15px;
+            font-size: 46px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            margin: 0;
+            max-width: 550px;
+            font-size: 19px;
+        }
+
+        .hero-logo {
+            width: 220px;
+            padding: 25px;
+            background: var(--white);
+            border-radius: 4px;
+        }
+
+            .hero-logo img {
+                width: 100%;
+            }
+
+
+        /* =========================================================
+           GENERAL SECTIONS
+           ========================================================= */
+
+        section {
+            padding: 65px 25px;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+            .section-title h2 {
+                margin: 0 0 8px;
+                color: var(--dark-blue);
+                font-size: 32px;
+            }
+
+        /*
+           Used specifically in this prototype to explain what
+           each section is supposed to accomplish.
+        */
+
+        .section-purpose {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+
+        /* =========================================================
+           REGISTRATION
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Main registration call-to-action.
+
+           The season/year and age range should be immediately
+           visible to parents.
+        */
+
+        .registration {
+            background: var(--white);
+        }
+
+        .registration-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .registration-card {
+            border: 2px solid var(--royal-blue);
+            background: var(--white);
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .registration-season {
+            padding: 13px;
+            background: var(--royal-blue);
+            color: var(--white);
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .registration-content {
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .registration-card h3 {
+            margin: 0 0 10px;
+            color: var(--dark-blue);
+            font-size: 23px;
+        }
+
+        /*
+           AGE RANGE IS DELIBERATELY LARGE.
+        */
+
+        .registration-age {
+            margin: 5px 0 15px;
+            color: var(--royal-blue);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .registration-description {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .registration-link {
+            margin-top: auto;
+            padding-top: 20px;
+            color: var(--royal-blue);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           REVIEWS / TESTIMONIALS
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Display testimonials / reviews from families,
+           players, parents, coaches, etc.
+        */
+
+        .reviews {
+            background: var(--light-gray);
+        }
+
+        .review-box {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: var(--white);
+            border-left: 5px solid var(--royal-blue);
+        }
+
+            .review-box blockquote {
+                margin: 0 0 15px;
+                color: var(--dark);
+                font-size: 20px;
+            }
+
+        .review-author {
+            margin: 0;
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           PROGRAM INFORMATION
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Brief overview of the different programs offered.
+        */
+
+        .programs {
+            background: var(--white);
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .program-card {
+            padding: 25px;
+            border: 1px solid var(--medium-gray);
+            background: var(--white);
+        }
+
+            .program-card h3 {
+                margin: 0 0 10px;
+                color: var(--dark-blue);
+                font-size: 20px;
+            }
+
+            .program-card p {
+                margin: 0;
+                color: var(--text-gray);
+                font-size: 14px;
+            }
+
+
+        /* =========================================================
+           CONNECT WITH US
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Display direct contact information.
+        */
+
+        .connect {
+            background: var(--light-blue);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-item {
+            padding: 25px;
+            background: var(--white);
+            border: 1px solid var(--medium-gray);
+        }
+
+            .contact-item h3 {
+                margin: 0 0 10px;
+                color: var(--dark-blue);
+                font-size: 18px;
+            }
+
+            .contact-item p {
+                margin: 0;
+                color: var(--text-gray);
+                font-size: 15px;
+            }
+
+
+        /* =========================================================
+           WHERE WE PLAY
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Help parents find the fields where games and practices
+           take place.
+
+           Actual field information can be added later.
+        */
+
+        .locations {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--medium-gray);
+        }
+
+            .locations h3 {
+                margin: 0 0 8px;
+                color: var(--dark-blue);
+                font-size: 21px;
+            }
+
+            .locations p {
+                margin: 0 0 15px;
+                color: var(--text-gray);
+            }
+
+        .locations-link {
+            display: inline-block;
+            padding: 11px 18px;
+            background: var(--royal-blue);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+            .locations-link:hover {
+                background: var(--dark-blue);
+            }
+
+
+        /* =========================================================
+           GET INVOLVED
+           ========================================================= */
+
+        /*
+           PURPOSE:
+           Provide opportunities for people to support the club
+           outside of registration.
+        */
+
+        .get-involved {
+            background: var(--white);
+            border-top: 1px solid var(--medium-gray);
+        }
+
+        .involvement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .involvement-card {
+            padding: 30px;
+            border: 2px solid var(--royal-blue);
+            text-align: center;
+        }
+
+            .involvement-card h3 {
+                margin: 0 0 10px;
+                color: var(--dark-blue);
+                font-size: 22px;
+            }
+
+            .involvement-card p {
+                margin: 0 0 20px;
+                color: var(--text-gray);
+            }
+
+        .involvement-link {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--royal-blue);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 25px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+            .footer-inner p {
+                margin: 5px 0 0;
+                color: #d0dced;
+                font-size: 14px;
+            }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+        }
+
+            .footer-nav a {
+                font-size: 14px;
+            }
+
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .registration-grid,
+            .program-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-inner {
+                gap: 30px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 50px 18px;
+            }
+
+            .header-inner {
+                padding: 12px 18px;
+            }
+
+            .site-header nav {
+                display: none;
+            }
+
+            .hero-inner {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                padding: 50px 20px;
+            }
+
+            .hero-logo {
+                width: 150px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .registration-grid,
+            .program-grid,
+            .contact-grid,
+            .involvement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .registration-card {
+                min-height: 230px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="#" class="logo">
+
+                <img src="rexdale-logo.png"
+                     alt="Rexdale Soccer League">
+
+            </a>
+
+            <nav>
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#">
+                    Summer
+                </a>
+
+                <a href="#">
+                    Winter
+                </a>
+
+                <a href="#">
+                    Competitive Rep
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
+    <section class="hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-text">
+
+                <p class="section-purpose">
+                    PURPOSE: Main introduction to Rexdale Soccer
+                </p>
+
+                <h1>
+                    Welcome to Rexdale Soccer League
+                </h1>
+
+                <p>
+                    Brief introduction to the club,
+                    its history, and its role in the community.
+                </p>
+
+            </div>
+
+
+            <div class="hero-logo">
+
+                <img src="rexdale-logo.png"
+                     alt="Rexdale Soccer League logo">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REGISTRATION
+         ========================================================= -->
+
+    <section class="registration">
+
+        <div class="section-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    2027 Soccer Registration
+                </h2>
+
+                <p class="section-purpose">
+                    PURPOSE: Main registration options.
+                    Make season, year, and age range immediately clear.
+                    ***The summer and winter tabs could have similar information to this and links to the jotforms for the season
+                </p>
+
+            </div>
+
+
+            <div class="registration-grid">
+
+
+                <a href="#" class="registration-card">
+
+                    <div class="registration-season">
+                        SUMMER 2027
+                    </div>
+
+                    <div class="registration-content">
+
+                        <h3>
+                            Micro / Timbits
+                        </h3>
+
+                        <div class="registration-age">
+                            AGES 4–6
+                        </div>
+
+                        <p class="registration-description">
+                            Short description of the Micro /
+                            Timbits program.
+                        </p>
+
+                        <span class="registration-link">
+                            Registration link
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="#" class="registration-card">
+
+                    <div class="registration-season">
+                        SUMMER 2027
+                    </div>
+
+                    <div class="registration-content">
+
+                        <h3>
+                            Youth Soccer
+                        </h3>
+
+                        <div class="registration-age">
+                            AGES 7–18
+                        </div>
+
+                        <p class="registration-description">
+                            Short description of the summer
+                            youth program.
+                        </p>
+
+                        <span class="registration-link">
+                            Registration link
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="#" class="registration-card">
+
+                    <div class="registration-season">
+                        FALL 2027
+                    </div>
+
+                    <div class="registration-content">
+
+                        <h3>
+                            Indoor Futsal
+                        </h3>
+
+                        <div class="registration-age">
+                            AGES 7–18
+                        </div>
+
+                        <p class="registration-description">
+                            Short description of the fall
+                            indoor program.
+                        </p>
+
+                        <span class="registration-link">
+                            Registration link
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="#" class="registration-card">
+
+                    <div class="registration-season">
+                        WINTER 2027
+                    </div>
+
+                    <div class="registration-content">
+
+                        <h3>
+                            Indoor Futsal
+                        </h3>
+
+                        <div class="registration-age">
+                            AGES 7–18
+                        </div>
+
+                        <p class="registration-description">
+                            Short description of the winter
+                            indoor program.
+                        </p>
+
+                        <span class="registration-link">
+                            Registration link
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REVIEWS
+         ========================================================= -->
+
+    <section class="reviews">
+
+        <div class="section-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    Reviews & Testimonials
+                </h2>
+
+                <p class="section-purpose">
+                    PURPOSE: Display testimonials from players,
+                    parents, coaches, and members of the community.
+                </p>
+
+            </div>
+
+
+            <div class="review-box">
+
+                <blockquote>
+                    "Toronto's best kept secret among the soccer world.
+                    Professionally managed with great coaching for their
+                    competitive teams."
+                </blockquote>
+
+                <p class="review-author">
+                    — Anthony Gordon
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PROGRAM INFORMATION
+         ========================================================= -->
+
+    <section class="programs">
+
+        <div class="section-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    Our Programs
+                </h2>
+
+                <p class="section-purpose">
+                    PURPOSE: Brief overview of the different
+                    programs offered by Rexdale Soccer.
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <h3>
+                        House League
+                    </h3>
+
+                    <p>
+                        Brief description of the House League
+                        program and who it is intended for.
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <h3>
+                        Timbits Soccer
+                    </h3>
+
+                    <p>
+                        Brief description of the Timbits program
+                        for younger players.
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <h3>
+                        Indoor Futsal
+                    </h3>
+
+                    <p>
+                        Brief description of the fall and winter
+                        indoor programs.
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <h3>
+                        Competitive Rep
+                    </h3>
+
+                    <p>
+                        Brief description of the competitive
+                        soccer program.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONNECT WITH US
+         ========================================================= -->
+
+    <section class="connect">
+
+        <div class="section-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    Connect With Us
+                </h2>
+
+                <p class="section-purpose">
+                    PURPOSE: Give visitors the club's direct
+                    contact information.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        club email address
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        club phone number
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Mailing Address
+                    </h3>
+
+                    <p>
+                        club mailing address
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= WHERE WE PLAY ================= -->
+
+            <div class="locations">
+
+                <h3>
+                    Where We Play
+                </h3>
+
+                <p class="section-purpose">
+                    PURPOSE: Help players and parents find
+                    Rexdale Soccer fields and facilities.
+                </p>
+
+                <p>
+                    Link to field locations and maps.
+                </p>
+
+                <a href="#"
+                   class="locations-link">
+                    Field Locations & Maps
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         GET INVOLVED
+         ========================================================= -->
+
+    <section class="get-involved">
+
+        <div class="section-inner">
+
+            <div class="section-title">
+
+                <h2>
+                    Get Involved
+                </h2>
+
+                <p class="section-purpose">
+                    PURPOSE: Provide ways for community members
+                    and organizations to support Rexdale Soccer.
+                </p>
+
+            </div>
+
+
+            <div class="involvement-grid">
+
+
+                <div class="involvement-card">
+
+                    <h3>
+                        Sponsor
+                    </h3>
+
+                    <p>
+                        Information about sponsoring a team
+                        or supporting the club.
+                    </p>
+
+                    <a href="#"
+                       class="involvement-link">
+                        Sponsor Information
+                    </a>
+
+                </div>
+
+
+
+                <div class="involvement-card">
+
+                    <h3>
+                        Volunteer
+                    </h3>
+
+                    <p>
+                        Information about volunteering with
+                        Rexdale Soccer.
+                    </p>
+
+                    <a href="#"
+                       class="involvement-link">
+                        Volunteer Information
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+
+                <strong>
+                    Rexdale Soccer League
+                </strong>
+
+                <p>
+                    Footer information,
+                    copyright, and club details.
+                </p>
+
+            </div>
+
+
+            <nav class="footer-nav">
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#">
+                    Summer
+                </a>
+
+                <a href="#">
+                    Winter
+                </a>
+
+                <a href="#">
+                    Competitive Rep
+                </a>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Contact Us
+                </a>
+
+            </nav>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
